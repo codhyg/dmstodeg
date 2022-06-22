@@ -1,0 +1,5 @@
+// the congured options and settings for dmstodeg
+//
+#define dmstodeg_VERSION_MAJOR @dmstodeg_VERSION_MAJOR@
+#define dmstodeg_VERSION_MINOR @dmstodeg_VERSION_MINOR@
+#define dmstodeg_VERSION_PATCH @dmstodeg_VERSION_PATCH@
