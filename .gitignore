@@ -13,3 +13,5 @@
 *.swp
 /build
 .DS_Store
+CMakeLists.txt.user
+/build-debug

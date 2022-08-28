@@ -86,5 +86,5 @@ add_custom_command(
 		-DHEADER_DIR:PATH="${CMAKE_SOURCE_DIR}"
 		-DCACHE_DIR:PATH="${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}"
 		-DLANGUAGE:STRING="CXX"
-		-P "${MASTER_DIR}/build_number.cmake"
+                -P "${PROJECT_SOURCE_DIR}/build_number.cmake"
 )
