@@ -17,5 +17,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void calculate_pressed();
+    void reverse_pressed();
+
 };
 #endif // MAINWINDOW_H
