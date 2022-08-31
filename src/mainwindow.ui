@@ -52,6 +52,9 @@
 }
 </string>
     </property>
+    <property name="maxLength">
+     <number>3</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="dmsMinutesField">
     <property name="geometry">
@@ -72,6 +75,9 @@
 	background-color: white;
 }
 </string>
+    </property>
+    <property name="maxLength">
+     <number>3</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="dmsSecondsField">
@@ -94,6 +100,9 @@
 }
 </string>
     </property>
+    <property name="maxLength">
+     <number>3</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="degField">
     <property name="geometry">
@@ -111,6 +120,9 @@
 	background-color: white;
 }
 </string>
+    </property>
+    <property name="maxLength">
+     <number>9</number>
     </property>
    </widget>
    <widget class="QPushButton" name="calculateButton">
