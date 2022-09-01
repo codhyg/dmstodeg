@@ -32,78 +32,6 @@
    <string>DMS to DEG</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="dmsDegField">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>70</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Degrees&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit {
-	qproperty-alignment: 'AlignVCenter | AlignRight';
-	border: 1px solid gray;
-	background-color: white;
-}
-</string>
-    </property>
-    <property name="maxLength">
-     <number>3</number>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="dmsMinutesField">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>0</y>
-      <width>70</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minutes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit {
-	qproperty-alignment: 'AlignVCenter | AlignRight';
-	border: 1px solid gray;
-	background-color: white;
-}
-</string>
-    </property>
-    <property name="maxLength">
-     <number>3</number>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="dmsSecondsField">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>0</y>
-      <width>70</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seconds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit {
-	qproperty-alignment: 'AlignVCenter | AlignRight';
-	border: 1px solid gray;
-	background-color: white;
-}
-</string>
-    </property>
-    <property name="maxLength">
-     <number>3</number>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="degField">
     <property name="geometry">
      <rect>
@@ -118,6 +46,7 @@
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	border: 1px solid gray;
 	background-color: white;
+	color: black;
 }
 </string>
     </property>
@@ -243,6 +172,72 @@ QPushButton:pressed {
     </property>
     <property name="text">
      <string>&quot;</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxDeg">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	qproperty-alignment: 'AlignVCenter | AlignRight';
+	border: 1px solid gray;
+	background-color: white;
+	color:  black;
+}
+</string>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxMin">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>0</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	qproperty-alignment: 'AlignVCenter | AlignRight';
+	border: 1px solid gray;
+	background-color: white;
+	color: black;
+}
+</string>
+    </property>
+    <property name="maximum">
+     <number>59</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxSec">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>0</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+	qproperty-alignment: 'AlignVCenter | AlignRight';
+	border: 1px solid gray;
+	background-color: white;
+	color: black;
+}
+</string>
+    </property>
+    <property name="maximum">
+     <number>59</number>
     </property>
    </widget>
   </widget>

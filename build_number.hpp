@@ -3,6 +3,6 @@
 #ifndef CMAKE_BUILD_NUMBER_HEADER
 #define CMAKE_BUILD_NUMBER_HEADER
 
-#define BUILD_NUMBER 27
+#define BUILD_NUMBER 28
 
 #endif

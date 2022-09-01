@@ -11,11 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->calculateButton,SIGNAL(released()),this,SLOT(calculate_pressed()));
     connect(ui->reverseButton,SIGNAL(released()),this,SLOT(reverse_pressed()));
-    QValidator *int360Validator = new QIntValidator(0, 359, this);
-    QValidator *int60Validator = new QIntValidator(0, 59, this);
-    ui->dmsDegField->setValidator(int360Validator);
-    ui->dmsMinutesField->setValidator(int60Validator);
-    ui->dmsSecondsField->setValidator(int60Validator);
+    ui->spinBoxDeg->setButtonSymbols(QAbstractSpinBox::NoButtons);
+    ui->spinBoxMin->setButtonSymbols(QAbstractSpinBox::NoButtons);
+    ui->spinBoxSec->setButtonSymbols(QAbstractSpinBox::NoButtons);
 }
 
 MainWindow::~MainWindow()
@@ -27,16 +25,13 @@ void MainWindow::calculate_pressed()
 {
     std::cout << "calculate button pressed" << '\n';
 
-    int a{};
-    a =intInput(ui->dmsDegField->text());
+    int a{ ui->spinBoxDeg->text().toInt() };
     std::cout << a << '\n';
 
-    int b{};
-    b = intInput(ui->dmsMinutesField->text());
+    int b{ ui->spinBoxMin->text().toInt()};
     std::cout << b << '\n';
 
-    int c{};
-    c = intInput(ui->dmsSecondsField->text());
+    int c{ ui->spinBoxSec->text().toInt() };
     std::cout << c << '\n';
 
     ui->degField->setText(QString::number(intSum(a, b, c)));
