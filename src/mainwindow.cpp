@@ -26,17 +26,33 @@ MainWindow::~MainWindow()
 void MainWindow::calculate_pressed()
 {
     std::cout << "calculate button pressed" << '\n';
-    QString degEditText = ui->degField->text();
-    std::cout << degEditText.toStdString().c_str() << '\n';
-    degEditText = ui->dmsDegField->text();
-    std::cout << degEditText.toStdString().c_str() << '\n';
-    degEditText = ui->dmsMinutesField->text();
-    std::cout << degEditText.toStdString().c_str() << '\n';
-    degEditText = ui->dmsSecondsField->text();
-    std::cout << degEditText.toStdString().c_str() << '\n';
+
+    int a{};
+    a =intInput(ui->dmsDegField->text());
+    std::cout << a << '\n';
+
+    int b{};
+    b = intInput(ui->dmsMinutesField->text());
+    std::cout << b << '\n';
+
+    int c{};
+    c = intInput(ui->dmsSecondsField->text());
+    std::cout << c << '\n';
+
+    ui->degField->setText(QString::number(intSum(a, b, c)));
 }
 
 void MainWindow::reverse_pressed()
 {
     std::cout << "reverse button pressed" << '\n';
+}
+
+int MainWindow::intInput(const QString& s)
+{
+    return s.toInt();
+}
+
+int MainWindow::intSum(int a, int b, int c)
+{
+    return a + b + c;
 }

@@ -21,6 +21,8 @@ private:
 private slots:
     void calculate_pressed();
     void reverse_pressed();
+    int intInput(const QString& s);
+    int intSum(int a, int b, int c);
 
 };
 #endif // MAINWINDOW_H

@@ -124,6 +124,9 @@
     <property name="maxLength">
      <number>9</number>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="calculateButton">
     <property name="geometry">
