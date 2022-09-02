@@ -17,6 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->spinBoxDeg->setButtonSymbols(QAbstractSpinBox::NoButtons);
     ui->spinBoxMin->setButtonSymbols(QAbstractSpinBox::NoButtons);
     ui->spinBoxSec->setButtonSymbols(QAbstractSpinBox::NoButtons);
+
+    ui->spinBoxDeg->setFocus();
+    ui->spinBoxDeg->selectAll();
 }
 
 MainWindow::~MainWindow()
