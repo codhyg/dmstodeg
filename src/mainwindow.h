@@ -22,7 +22,7 @@ private slots:
     void calculate_pressed();
     void reverse_pressed();
     int intInput(const QString& s);
-    int intSum(int a, int b, int c);
+    double dmsToDegConversion(int deg, int min, int sec);
 
 };
 #endif // MAINWINDOW_H

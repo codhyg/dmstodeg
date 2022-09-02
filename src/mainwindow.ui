@@ -193,7 +193,7 @@ QPushButton:pressed {
 </string>
     </property>
     <property name="maximum">
-     <number>359</number>
+     <number>360</number>
     </property>
    </widget>
    <widget class="QSpinBox" name="spinBoxMin">
@@ -215,7 +215,7 @@ QPushButton:pressed {
 </string>
     </property>
     <property name="maximum">
-     <number>59</number>
+     <number>60</number>
     </property>
    </widget>
    <widget class="QSpinBox" name="spinBoxSec">
@@ -237,7 +237,7 @@ QPushButton:pressed {
 </string>
     </property>
     <property name="maximum">
-     <number>59</number>
+     <number>60</number>
     </property>
    </widget>
   </widget>
