@@ -2,12 +2,15 @@
 #include "./ui_mainwindow.h"
 #include <iostream>
 #include <QIntValidator>
+#include <QShortcut>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q), this, SLOT(close()));
 
     //SIGNALS AND SLOTS
     connect(ui->calculateButton,SIGNAL(released()),this,SLOT(calculate_pressed()));
