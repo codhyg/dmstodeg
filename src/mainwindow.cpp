@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q), this, SLOT(close()));
+    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_R), this, SLOT(reverse_pressed()));
+    new QShortcut(QKeySequence(Qt::Key_D), ui->spinBoxDeg, SLOT(setFocus()));
 
     //SIGNALS AND SLOTS
     connect(ui->calculateButton,SIGNAL(released()),this,SLOT(calculate_pressed()));
