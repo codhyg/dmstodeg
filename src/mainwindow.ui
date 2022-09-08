@@ -114,152 +114,176 @@ QPushButton:pressed {
      <string>Ctrl+R</string>
     </property>
    </widget>
-   <widget class="QLabel" name="dmsDegreesLabel">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>0</y>
-      <width>20</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {
-	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	border: 1px solid gray;
-	background-color: white;
-	color: black;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>°</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="dmsMinutesLabel">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>0</y>
-      <width>20</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {
-	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	border: 1px solid gray;
-	background-color: white;
-	color: black;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>'</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="dmsSecondsLabel">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>0</y>
-      <width>20</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {
-	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	border: 1px solid gray;
-	background-color: white;
-	color: black;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>&quot;</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinBoxDeg">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>70</width>
+      <width>270</width>
       <height>30</height>
      </rect>
     </property>
-    <property name="focusPolicy">
-     <enum>Qt::WheelFocus</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QSpinBox {
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QSpinBox" name="spinBoxDeg">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSpinBox {
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	border: 1px solid gray;
 	background-color: white;
 	color:  black;
 }
 </string>
-    </property>
-    <property name="maximum">
-     <number>360</number>
-    </property>
-    <property name="value">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinBoxMin">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>0</y>
-      <width>70</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::WheelFocus</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QSpinBox {
-	qproperty-alignment: 'AlignVCenter | AlignRight';
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="maximum">
+        <number>360</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="dmsDegLabel">
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	border: 1px solid gray;
 	background-color: white;
 	color: black;
-}
-</string>
-    </property>
-    <property name="maximum">
-     <number>60</number>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinBoxSec">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>0</y>
-      <width>70</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::WheelFocus</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QSpinBox {
+}</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;°&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBoxMin">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSpinBox {
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	border: 1px solid gray;
 	background-color: white;
-	color: black;
+	color:  black;
 }
 </string>
-    </property>
-    <property name="maximum">
-     <number>60</number>
-    </property>
+       </property>
+       <property name="maximum">
+        <number>60</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="dmsMinLabel">
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	qproperty-alignment: 'AlignVCenter | AlignLeft';
+	border: 1px solid gray;
+	background-color: white;
+	color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;'&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBoxSec">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSpinBox {
+	qproperty-alignment: 'AlignVCenter | AlignRight';
+	border: 1px solid gray;
+	background-color: white;
+	color:  black;
+}
+</string>
+       </property>
+       <property name="maximum">
+        <number>60</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="dmsSecLabel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	qproperty-alignment: 'AlignVCenter | AlignLeft';
+	border: 1px solid gray;
+	background-color: white;
+	color: black;
+}</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>

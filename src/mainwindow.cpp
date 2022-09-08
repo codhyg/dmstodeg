@@ -53,11 +53,8 @@ void MainWindow::calculate_pressed()
 void MainWindow::reverse_pressed()
 {
     std::cout << "reverse button pressed" << '\n';
-    QPropertyAnimation *animation = new QPropertyAnimation(ui->degField, "geometry");
-    animation->setDuration(1000);
-    animation->setStartValue(ui->degField->geometry());
-    animation->setEndValue(QRect(0, 0, ui->degField->width(), ui->degField->height()));
-    animation->start();
+    switchAnimation(ui->degField, ui->widget);
+    switchAnimation(ui->widget, ui->degField);
 }
 
 int MainWindow::intInput(const QString& s)
@@ -70,4 +67,13 @@ double MainWindow::dmsToDegConversion(int deg, int min, int sec)
     const int sixty{ 60 }; //60 seconds in one minute, 60 minutes in one degree
 
     return (double)deg + ((double)sec/sixty + (double)min)/sixty;
+}
+
+void MainWindow::switchAnimation(QWidget* w1, QWidget* w2)
+{
+    QPropertyAnimation *animation = new QPropertyAnimation(w1, "geometry");
+    animation->setDuration(100);
+    animation->setStartValue(w1->geometry());
+    animation->setEndValue(QRect(w2->x(), w2->y(), w1->width(), w2->height()));
+    animation->start();
 }
