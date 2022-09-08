@@ -11,12 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q), this, SLOT(close()));
-    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_R), this, SLOT(reverse_pressed()));
-    new QShortcut(QKeySequence(Qt::Key_D), ui->spinBoxDeg, SLOT(setFocus()));
+    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_D), ui->spinBoxDeg, SLOT(setFocus()));
+    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_M), ui->spinBoxMin, SLOT(setFocus()));
+    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_S), ui->spinBoxSec, SLOT(setFocus()));
 
     //SIGNALS AND SLOTS
-    connect(ui->calculateButton,SIGNAL(released()),this,SLOT(calculate_pressed()));
-    connect(ui->reverseButton,SIGNAL(released()),this,SLOT(reverse_pressed()));
+    connect(ui->calculateButton, SIGNAL(released()), this, SLOT(calculate_pressed()));
+    connect(ui->reverseButton, SIGNAL(released()), this, SLOT(reverse_pressed()));
 
     //UI ITEMS CONFIG
     ui->spinBoxDeg->setButtonSymbols(QAbstractSpinBox::NoButtons);

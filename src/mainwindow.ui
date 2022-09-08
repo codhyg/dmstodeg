@@ -28,6 +28,9 @@
     <height>90</height>
    </size>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::ClickFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>DMS to DEG</string>
   </property>
@@ -108,7 +111,7 @@ QPushButton:pressed {
      <string>Reverse</string>
     </property>
     <property name="shortcut">
-     <string>R</string>
+     <string>Ctrl+R</string>
     </property>
    </widget>
    <widget class="QLabel" name="dmsDegreesLabel">
@@ -189,6 +192,9 @@ QPushButton:pressed {
       <height>30</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
     <property name="styleSheet">
      <string notr="true">QSpinBox {
 	qproperty-alignment: 'AlignVCenter | AlignRight';
@@ -214,6 +220,9 @@ QPushButton:pressed {
       <height>30</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
     <property name="styleSheet">
      <string notr="true">QSpinBox {
 	qproperty-alignment: 'AlignVCenter | AlignRight';
@@ -235,6 +244,9 @@ QPushButton:pressed {
       <width>70</width>
       <height>30</height>
      </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
     </property>
     <property name="styleSheet">
      <string notr="true">QSpinBox {
