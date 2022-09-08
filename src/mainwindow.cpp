@@ -56,7 +56,7 @@ void MainWindow::reverse_pressed()
     QPropertyAnimation *animation = new QPropertyAnimation(ui->degField, "geometry");
     animation->setDuration(1000);
     animation->setStartValue(ui->degField->geometry());
-    animation->setEndValue(QRect(0, 0, 270, 30));
+    animation->setEndValue(QRect(0, 0, ui->degField->width(), ui->degField->height()));
     animation->start();
 }
 
