@@ -3,6 +3,7 @@
 #include <iostream>
 #include <QIntValidator>
 #include <QShortcut>
+#include <QPropertyAnimation>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -52,6 +53,11 @@ void MainWindow::calculate_pressed()
 void MainWindow::reverse_pressed()
 {
     std::cout << "reverse button pressed" << '\n';
+    QPropertyAnimation *animation = new QPropertyAnimation(ui->degField, "geometry");
+    animation->setDuration(1000);
+    animation->setStartValue(ui->degField->geometry());
+    animation->setEndValue(QRect(0, 0, 270, 30));
+    animation->start();
 }
 
 int MainWindow::intInput(const QString& s)
