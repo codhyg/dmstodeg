@@ -4,6 +4,7 @@
 #include <QIntValidator>
 #include <QShortcut>
 #include <QPropertyAnimation>
+#include <cmath>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,16 +42,13 @@ void MainWindow::calculate_pressed()
 {
     std::cout << "calculate button pressed" << '\n';
 
-    int deg{ ui->spinBoxDeg->text().toInt() };
-    std::cout << deg << '\n';
+    if (dmsToDegState)
+    {
+        calcDmsToDeg();
+    } else {
+        calcDegToDms();
+    }
 
-    int min{ ui->spinBoxMin->text().toInt()};
-    std::cout << min << '\n';
-
-    int sec{ ui->spinBoxSec->text().toInt() };
-    std::cout << sec << '\n';
-
-    ui->degField->setText(QString().asprintf("%0.4f", dmsToDegConversion(deg, min, sec)));
 }
 
 void MainWindow::reverse_pressed()
@@ -86,6 +84,32 @@ int MainWindow::intInput(const QString& s)
     return s.toInt();
 }
 
+void MainWindow::calcDmsToDeg()
+{
+    int deg{ ui->spinBoxDeg->text().toInt() };
+    std::cout << deg << '\n';
+
+    int min{ ui->spinBoxMin->text().toInt()};
+    std::cout << min << '\n';
+
+    int sec{ ui->spinBoxSec->text().toInt() };
+    std::cout << sec << '\n';
+
+    ui->degField->setText(QString().asprintf("%0.4f", dmsToDegConversion(deg, min, sec)));
+}
+
+void MainWindow::calcDegToDms()
+{
+    double decdeg{ ui->degField->text().toDouble() };
+    double deg = floor(decdeg);
+    double min = (decdeg - deg) * 60 ;
+    double sec = (floor(min) - min) * 60 ;
+
+    ui->spinBoxDeg->setValue(deg);
+    ui->spinBoxMin->setValue(min);
+    ui->spinBoxSec->setValue(sec);
+}
+
 double MainWindow::dmsToDegConversion(int deg, int min, int sec)
 {
     const int sixty{ 60 }; //60 seconds in one minute, 60 minutes in one degree
@@ -101,3 +125,4 @@ void MainWindow::switchAnimation(QWidget* w1, QWidget* w2)
     animation->setEndValue(QRect(w2->x(), w2->y(), w1->width(), w2->height()));
     animation->start();
 }
+

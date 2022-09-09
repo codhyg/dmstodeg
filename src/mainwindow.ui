@@ -53,6 +53,9 @@
 }
 </string>
     </property>
+    <property name="text">
+     <string/>
+    </property>
     <property name="maxLength">
      <number>9</number>
     </property>

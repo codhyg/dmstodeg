@@ -25,6 +25,8 @@ private slots:
     int intInput(const QString& s);
     double dmsToDegConversion(int deg, int min, int sec);
     void switchAnimation(QWidget* w1, QWidget* w2);
+    void calcDmsToDeg();
+    void calcDegToDms();
 
 };
 #endif // MAINWINDOW_H
