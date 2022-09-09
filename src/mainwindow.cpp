@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    bool dmsToDegState {true};
+
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q), this, SLOT(close()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_D), ui->spinBoxDeg, SLOT(setFocus()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_M), ui->spinBoxMin, SLOT(setFocus()));
@@ -25,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->spinBoxMin->setButtonSymbols(QAbstractSpinBox::NoButtons);
     ui->spinBoxSec->setButtonSymbols(QAbstractSpinBox::NoButtons);
 
+    //this goes to IF section
     ui->spinBoxDeg->setFocus();
     ui->spinBoxDeg->selectAll();
 }
@@ -55,6 +58,27 @@ void MainWindow::reverse_pressed()
     std::cout << "reverse button pressed" << '\n';
     switchAnimation(ui->degField, ui->widget);
     switchAnimation(ui->widget, ui->degField);
+
+    if (dmsToDegState)
+    {
+        ui->spinBoxDeg->setFocus();
+        ui->spinBoxDeg->selectAll();
+        ui->degField->setReadOnly(true);
+        ui->spinBoxDeg->setReadOnly(false);
+        ui->spinBoxMin->setReadOnly(false);
+        ui->spinBoxSec->setReadOnly(false);
+
+        dmsToDegState = false;
+    } else {
+        ui->degField->setReadOnly(false);
+        ui->degField->setFocus();
+        ui->degField->selectAll();
+        ui->spinBoxDeg->setReadOnly(true);
+        ui->spinBoxMin->setReadOnly(true);
+        ui->spinBoxSec->setReadOnly(true);
+
+        dmsToDegState = true;
+    }
 }
 
 int MainWindow::intInput(const QString& s)
