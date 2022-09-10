@@ -17,7 +17,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    bool dmsToDegState;
+    bool dmsToDegState{true};
 
 private slots:
     void calculate_pressed();

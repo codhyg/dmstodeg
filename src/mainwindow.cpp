@@ -5,6 +5,8 @@
 #include <QShortcut>
 #include <QPropertyAnimation>
 #include <cmath>
+#include <QTimer>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,7 +14,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    bool dmsToDegState {true};
 
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q), this, SLOT(close()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_D), ui->spinBoxDeg, SLOT(setFocus()));
@@ -22,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     //SIGNALS AND SLOTS
     connect(ui->calculateButton, SIGNAL(released()), this, SLOT(calculate_pressed()));
     connect(ui->reverseButton, SIGNAL(released()), this, SLOT(reverse_pressed()));
+    QTimer::singleShot(0, ui->spinBoxDeg, SLOT(selectAll()));
 
     //UI ITEMS CONFIG
     ui->spinBoxDeg->setButtonSymbols(QAbstractSpinBox::NoButtons);
@@ -40,15 +42,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::calculate_pressed()
 {
-    std::cout << "calculate button pressed" << '\n';
-
     if (dmsToDegState)
     {
         calcDmsToDeg();
     } else {
         calcDegToDms();
     }
-
 }
 
 void MainWindow::reverse_pressed()
@@ -59,21 +58,22 @@ void MainWindow::reverse_pressed()
 
     if (dmsToDegState)
     {
-        ui->spinBoxDeg->setFocus();
-        ui->spinBoxDeg->selectAll();
-        ui->degField->setReadOnly(true);
-        ui->spinBoxDeg->setReadOnly(false);
-        ui->spinBoxMin->setReadOnly(false);
-        ui->spinBoxSec->setReadOnly(false);
-
-        dmsToDegState = false;
-    } else {
         ui->degField->setReadOnly(false);
         ui->degField->setFocus();
         ui->degField->selectAll();
         ui->spinBoxDeg->setReadOnly(true);
         ui->spinBoxMin->setReadOnly(true);
         ui->spinBoxSec->setReadOnly(true);
+
+        dmsToDegState = false;
+    } else {
+
+        ui->spinBoxDeg->setFocus();
+        ui->spinBoxDeg->selectAll();
+        ui->degField->setReadOnly(true);
+        ui->spinBoxDeg->setReadOnly(false);
+        ui->spinBoxMin->setReadOnly(false);
+        ui->spinBoxSec->setReadOnly(false);
 
         dmsToDegState = true;
     }
@@ -103,7 +103,7 @@ void MainWindow::calcDegToDms()
     double decdeg{ ui->degField->text().toDouble() };
     double deg = floor(decdeg);
     double min = (decdeg - deg) * 60 ;
-    double sec = (floor(min) - min) * 60 ;
+    double sec = (min - floor(min)) * 60 ;
 
     ui->spinBoxDeg->setValue(deg);
     ui->spinBoxMin->setValue(min);
