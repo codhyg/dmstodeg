@@ -58,6 +58,9 @@ void MainWindow::reverse_pressed()
 
     if (dmsToDegState)
     {
+        QRegExp degRegex("(?:[0-1]?[0-9]?[0-9]|2[0-9][0-9]|3[0-5][0-9]|360)\\.(?:[0-9]?[0-9]?[0-9]?[0-9])");
+        QRegExpValidator *decDegValidator = new QRegExpValidator(degRegex, this);
+        ui->degField->setValidator(decDegValidator);
         ui->degField->setReadOnly(false);
         ui->degField->setFocus();
         ui->degField->selectAll();
