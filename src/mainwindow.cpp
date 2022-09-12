@@ -52,7 +52,6 @@ void MainWindow::calculate_pressed()
 
 void MainWindow::reverse_pressed()
 {
-    std::cout << "reverse button pressed" << '\n';
     switchAnimation(ui->degField, ui->widget);
     switchAnimation(ui->widget, ui->degField);
 
@@ -103,10 +102,12 @@ void MainWindow::calcDmsToDeg()
 
 void MainWindow::calcDegToDms()
 {
+    const int sixty{ 60 }; //60 seconds in one minute, 60 minutes in one degree
+
     double decdeg{ ui->degField->text().toDouble() };
     double deg = floor(decdeg);
-    double min = (decdeg - deg) * 60 ;
-    double sec = (min - floor(min)) * 60 ;
+    double min = (decdeg - deg) * sixty ;
+    double sec = (min - floor(min)) * sixty ;
 
     ui->spinBoxDeg->setValue(deg);
     ui->spinBoxMin->setValue(min);
