@@ -89,13 +89,10 @@ int MainWindow::intInput(const QString& s)
 void MainWindow::calcDmsToDeg()
 {
     int deg{ ui->spinBoxDeg->text().toInt() };
-    std::cout << deg << '\n';
 
     int min{ ui->spinBoxMin->text().toInt()};
-    std::cout << min << '\n';
 
     int sec{ ui->spinBoxSec->text().toInt() };
-    std::cout << sec << '\n';
 
     ui->degField->setText(QString().asprintf("%0.4f", dmsToDegConversion(deg, min, sec)));
 }
