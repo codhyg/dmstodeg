@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(dmstodeg VERSION 0.4.0)
 
+CMAKE_POLICY(SET CMP0020 NEW)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)
@@ -25,17 +26,16 @@ set(PROJECT_SOURCES
         src/mainwindow.ui
 )
 
-add_executable(dmstodeg ${PROJECT_SOURCES})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+add_executable(dmstodeg WIN32 ${PROJECT_SOURCES})
 
+set_property(TARGET dmstodeg PROPERTY WIN32_EXECUTABLE true)
 set_target_properties(dmstodeg PROPERTIES
-    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
+set_target_properties(dmstodeg PROPERTIES LINK_FLAGS "-mwindows")
+
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
 option(ENABLE_TEST "Turn on to enable tests" OFF)
 
