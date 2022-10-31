@@ -3,6 +3,9 @@
 Is a simple app for conversion of angle values (decimal to degrees, minutes,
 seconds)
 
+### v0.5.0
+Properly compiled for Win. Removed console debug messages.
+
 ### v0.4.0
 Main functionality is implemented. Added user input validation for decimal
 degrees.
