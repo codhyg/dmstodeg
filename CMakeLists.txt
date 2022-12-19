@@ -33,7 +33,9 @@ set_property(TARGET dmstodeg PROPERTY WIN32_EXECUTABLE true)
 set_target_properties(dmstodeg PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
-set_target_properties(dmstodeg PROPERTIES LINK_FLAGS "-mwindows")
+IF(WIN32)
+        set_target_properties(dmstodeg PROPERTIES LINK_FLAGS "-mwindows")
+ENDIF()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
