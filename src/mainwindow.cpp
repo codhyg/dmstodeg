@@ -30,6 +30,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->spinBoxDeg->setButtonSymbols(QAbstractSpinBox::NoButtons);
     ui->spinBoxMin->setButtonSymbols(QAbstractSpinBox::NoButtons);
     ui->spinBoxSec->setButtonSymbols(QAbstractSpinBox::NoButtons);
+    ui->spinBoxMin->installEventFilter(this);
+    ui->spinBoxSec->installEventFilter(this);
 
     //this goes to IF section
     ui->spinBoxDeg->setFocus();
@@ -128,3 +130,14 @@ void MainWindow::switchAnimation(QWidget* w1, QWidget* w2)
     animation->start();
 }
 
+bool MainWindow::eventFilter(QObject *object, QEvent *event)
+{
+    if (event->type() == QEvent::FocusIn)
+    {
+        if (object == ui->spinBoxMin)
+        {
+            ui->spinBoxMin->selectAll();
+        }
+    }
+    return false;
+}

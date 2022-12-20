@@ -27,6 +27,6 @@ private slots:
     void switchAnimation(QWidget* w1, QWidget* w2);
     void calcDmsToDeg();
     void calcDegToDms();
-
+    bool eventFilter(QObject *object, QEvent *event);
 };
 #endif // MAINWINDOW_H
