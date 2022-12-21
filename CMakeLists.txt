@@ -24,6 +24,9 @@ set(PROJECT_SOURCES
         src/mainwindow.cpp
         src/mainwindow.h
         src/mainwindow.ui
+        src/aboutwindow.h
+        src/aboutwindow.cpp
+        src/aboutwindow.ui
 )
 
 
