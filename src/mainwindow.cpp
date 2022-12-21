@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->spinBoxDeg->setButtonSymbols(QAbstractSpinBox::NoButtons);
     ui->spinBoxMin->setButtonSymbols(QAbstractSpinBox::NoButtons);
     ui->spinBoxSec->setButtonSymbols(QAbstractSpinBox::NoButtons);
+    ui->spinBoxDeg->installEventFilter(this);
     ui->spinBoxMin->installEventFilter(this);
     ui->spinBoxSec->installEventFilter(this);
 
@@ -134,9 +135,19 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
+        if (object == ui->spinBoxDeg)
+        {
+            ui->spinBoxDeg->selectAll();
+        }
+
         if (object == ui->spinBoxMin)
         {
             ui->spinBoxMin->selectAll();
+        }
+
+        if (object == ui->spinBoxSec)
+        {
+            ui->spinBoxSec->selectAll();
         }
     }
     return false;
