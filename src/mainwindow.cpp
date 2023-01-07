@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_M), ui->spinBoxMin, SLOT(setFocus()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_S), ui->spinBoxSec, SLOT(setFocus()));
     new QShortcut(QKeySequence(Qt::Key_Enter), this, SLOT(calculate_pressed()));
+    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Slash), this, SLOT(showAboutWindow()));
 
     //SIGNALS AND SLOTS
     connect(ui->calculateButton, SIGNAL(released()), this, SLOT(calculate_pressed()));
@@ -85,9 +86,6 @@ void MainWindow::reverse_pressed()
         dmsToDegState = true;
     }
 
-    AboutWindow aboutWindow;
-    aboutWindow.setModal(true);
-    aboutWindow.exec();
 }
 
 int MainWindow::intInput(const QString& s)
@@ -156,4 +154,11 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event)
         }
     }
     return false;
+}
+
+void MainWindow::showAboutWindow()
+{
+    AboutWindow aboutWindow;
+    aboutWindow.setModal(true);
+    aboutWindow.exec();
 }
