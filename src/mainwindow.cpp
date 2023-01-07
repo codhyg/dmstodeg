@@ -6,6 +6,7 @@
 #include <QPropertyAnimation>
 #include <cmath>
 #include <QTimer>
+#include "aboutwindow.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -83,6 +84,10 @@ void MainWindow::reverse_pressed()
 
         dmsToDegState = true;
     }
+
+    AboutWindow aboutWindow;
+    aboutWindow.setModal(true);
+    aboutWindow.exec();
 }
 
 int MainWindow::intInput(const QString& s)

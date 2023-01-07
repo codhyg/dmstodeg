@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #set(CMAKE_PREFIX_PATH "/usr/lib64/cmake/Qt5/")
-set(CMAKE_PREFIX_PATH "/usr/Qt/5.15.3/x86_64-w64-mingw32/")
+#set(CMAKE_PREFIX_PATH "/usr/Qt/5.15.3/x86_64-w64-mingw32/")
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
