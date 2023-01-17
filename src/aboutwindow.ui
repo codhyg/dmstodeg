@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>359</width>
-    <height>270</height>
+    <width>360</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -16,16 +16,33 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>360</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>360</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>About</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>20</y>
-     <width>162</width>
-     <height>203</height>
+     <x>0</x>
+     <y>0</y>
+     <width>361</width>
+     <height>305</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -35,7 +52,7 @@
     <property name="bottomMargin">
      <number>8</number>
     </property>
-    <item>
+    <item alignment="Qt::AlignHCenter">
      <widget class="QLabel" name="aboutLabel">
       <property name="enabled">
        <bool>true</bool>
@@ -58,6 +75,14 @@
         <height>45</height>
        </size>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;dmstodeg&lt;/span&gt;&lt;br/&gt;ver 0.5.0&lt;br/&gt;build 107&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
@@ -73,19 +98,44 @@
      </widget>
     </item>
     <item>
+     <widget class="QLabel" name="contactInfo">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;copy; 2023 codhyg   &lt;a href=&quot;https://github.com/codhyg/dmstodeg&quot;&gt;github.com&lt;/a&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="licenseInfo">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GPL-3.0 license&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QLabel" name="shortcutsLabel">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;Ctrl+Q
-&lt;br/&gt;
-Ctrl+D
-&lt;br/&gt;
-Ctrl+M
-&lt;br/&gt;
-Ctrl+S
-&lt;br/&gt;
-Ctrl+R&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Shortcuts&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Ctrl+Q - выход&lt;br/&gt;Ctrl+D - переход в поле градусы&lt;br/&gt;Ctrl+M - переход в поле минуты&lt;br/&gt;Ctrl+S - переход в поле секунды&lt;br/&gt;Ctrl+R - смена режима конверсии&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="disclaimerLabel">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, &lt;br/&gt;but WITHOUT ANY WARRANTY; without even the implied&lt;br/&gt;warranty of MERCHANTABILITY or FITNESS FOR A &lt;br/&gt;PARTICULAR PURPOSE. See the GNU General Public License&lt;br/&gt;for more details.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
