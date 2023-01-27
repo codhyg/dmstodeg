@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(dmstodeg VERSION 0.5.0)
+project(dmstodeg VERSION 0.7.0)
 
 CMAKE_POLICY(SET CMP0020 NEW)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)

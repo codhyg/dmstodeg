@@ -3,6 +3,11 @@
 Is a simple app for conversion of angle values (decimal to degrees, minutes,
 seconds)
 
+### v0.7.0
+- NumPad Enter support
+- Select field text on focus
+- About window has been added
+
 ### v0.5.0
 Properly compiled for Win. Removed console debug messages.
 
