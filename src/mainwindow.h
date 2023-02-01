@@ -29,5 +29,6 @@ private slots:
     void calcDegToDms();
     bool eventFilter(QObject *object, QEvent *event);
     void showAboutWindow();
+    void clearAllFields();
 };
 #endif // MAINWINDOW_H

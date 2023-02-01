@@ -3,6 +3,7 @@
 #include <QShortcut>
 #include "../build_number.hpp"
 #include "../include/config.h"
+#include "mainwindow.h"
 
 AboutWindow::AboutWindow(QWidget *parent) :
     QDialog(parent),
