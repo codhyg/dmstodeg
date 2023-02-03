@@ -34,6 +34,10 @@
   <property name="windowTitle">
    <string>DMS to DEG</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resources/img/appicon.png</normaloff>../resources/img/appicon.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="degField">
     <property name="geometry">
