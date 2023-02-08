@@ -11,6 +11,7 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/resources/img/dmstodeg.rc")
 
 #set(CMAKE_PREFIX_PATH "/usr/lib64/cmake/Qt5/")
 #set(CMAKE_PREFIX_PATH "/usr/Qt/5.15.3/x86_64-w64-mingw32/")
@@ -30,7 +31,7 @@ set(PROJECT_SOURCES
 )
 
 
-add_executable(dmstodeg WIN32 ${PROJECT_SOURCES})
+add_executable(dmstodeg WIN32 ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
 
 set_property(TARGET dmstodeg PROPERTY WIN32_EXECUTABLE true)
 set_target_properties(dmstodeg PROPERTIES
