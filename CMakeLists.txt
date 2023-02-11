@@ -11,7 +11,7 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/resources/img/dmstodeg.rc")
+set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/resources/img/dmstodeg_icon.o")
 
 #set(CMAKE_PREFIX_PATH "/usr/lib64/cmake/Qt5/")
 #set(CMAKE_PREFIX_PATH "/usr/Qt/5.15.3/x86_64-w64-mingw32/")
@@ -37,7 +37,7 @@ set_property(TARGET dmstodeg PROPERTY WIN32_EXECUTABLE true)
 set_target_properties(dmstodeg PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
-IF(WIN32)
+IF(MINGW)
         set_target_properties(dmstodeg PROPERTIES LINK_FLAGS "-mwindows")
 ENDIF()
 
