@@ -38,7 +38,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../resources/img/appicon.png</normaloff>../resources/img/appicon.png</iconset>
+    <normaloff>../resources/img/dmstodeg_icon.png</normaloff>../resources/img/dmstodeg_icon.png</iconset>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">

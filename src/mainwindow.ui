@@ -36,7 +36,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../resources/img/appicon.png</normaloff>../resources/img/appicon.png</iconset>
+    <normaloff>../resources/img/dmstodeg_icon.png</normaloff>../resources/img/dmstodeg_icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="degField">
@@ -80,6 +80,7 @@
      <string notr="true">QPushButton {
 	border: 1px solid gray;
 	background-color: red;
+	font-size: 12px
 }
 
 QPushButton:pressed {
@@ -107,12 +108,14 @@ QPushButton:pressed {
      <string notr="true">QPushButton {
 	border: 1px solid gray;
 	background-color: green;
+	font-size: 12px
 }
 
 QPushButton:pressed {
 	background-color: qLineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
 																					stop: 0 #BEBEBE, stop: 1 #f6f7fa);
-}</string>
+}
+</string>
     </property>
     <property name="text">
      <string>Reverse</string>

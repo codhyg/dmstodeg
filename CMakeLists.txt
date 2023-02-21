@@ -31,7 +31,11 @@ set(PROJECT_SOURCES
 )
 
 
-add_executable(dmstodeg WIN32 ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
+IF(MINGW)
+        add_executable(dmstodeg WIN32 ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
+ELSE()
+        add_executable(dmstodeg WIN32 ${PROJECT_SOURCES})
+ENDIF()
 
 set_property(TARGET dmstodeg PROPERTY WIN32_EXECUTABLE true)
 set_target_properties(dmstodeg PROPERTIES
