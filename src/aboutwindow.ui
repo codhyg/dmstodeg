@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>360</width>
-    <height>300</height>
+    <height>340</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>360</width>
-    <height>300</height>
+    <height>340</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>360</width>
-    <height>400</height>
+    <height>340</height>
    </size>
   </property>
   <property name="font">
@@ -46,7 +46,7 @@
      <x>0</x>
      <y>0</y>
      <width>363</width>
-     <height>305</height>
+     <height>347</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -125,7 +125,7 @@
     <item>
      <widget class="QLabel" name="shortcutsLabel">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Shortcuts&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Ctrl+Q - выход&lt;br/&gt;Ctrl+D - переход в поле градусы&lt;br/&gt;Ctrl+M - переход в поле минуты&lt;br/&gt;Ctrl+S - переход в поле секунды&lt;br/&gt;Ctrl+R - смена режима конверсии&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Shortcuts&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Ctrl+Q - выход&lt;br/&gt;Ctrl+D - переход в поле градусы&lt;br/&gt;Ctrl+M - переход в поле минуты&lt;br/&gt;Ctrl+S - переход в поле секунды&lt;br/&gt;Ctrl+R - смена режима конверсии&lt;br/&gt;Ctrl+L - сброс всех значений&lt;br/&gt;F1 или Ctrl+/ или Ctrl+? - справка &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>

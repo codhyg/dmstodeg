@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_S), ui->spinBoxSec, SLOT(setFocus()));
     new QShortcut(QKeySequence(Qt::Key_Enter), this, SLOT(calculate_pressed()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Slash), this, SLOT(showAboutWindow()));
+    new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Question), this, SLOT(showAboutWindow()));
     //TODO: add F1 shortcut for about window, ctrl+l for clear all
     new QShortcut(QKeySequence(Qt::Key_F1), this, SLOT(showAboutWindow()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_L), this, SLOT(clearAllFields()));
