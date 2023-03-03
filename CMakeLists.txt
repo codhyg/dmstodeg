@@ -31,7 +31,11 @@ set(PROJECT_SOURCES
 )
 
 
-add_executable(dmstodeg WIN32 ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
+IF (UNIX)
+        add_executable(dmstodeg WIN32 ${PROJECT_SOURCES})
+ELSE()
+        add_executable(dmstodeg WIN32 ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
+ENDIF()
 
 set_property(TARGET dmstodeg PROPERTY WIN32_EXECUTABLE true)
 set_target_properties(dmstodeg PROPERTIES
@@ -43,7 +47,7 @@ ENDIF()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-option(ENABLE_TEST "Turn on to enable tests" OFF)
+option(ENABLE_TEST "Turn on to enable tests" ON)
 
 if (ENABLE_TEST)
 		enable_testing()
