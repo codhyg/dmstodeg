@@ -7,6 +7,7 @@
 #include <cmath>
 #include <QTimer>
 #include "aboutwindow.h"
+#include "mathmodel.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -122,12 +123,6 @@ void MainWindow::calcDegToDms()
     ui->spinBoxSec->setValue(sec);
 }
 
-double MainWindow::dmsToDegConversion(int deg, int min, int sec)
-{
-    const int sixty{ 60 }; //60 seconds in one minute, 60 minutes in one degree
-
-    return (double)deg + ((double)sec/sixty + (double)min)/sixty;
-}
 
 void MainWindow::switchAnimation(QWidget* w1, QWidget* w2)
 {

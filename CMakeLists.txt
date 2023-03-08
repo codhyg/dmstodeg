@@ -17,6 +17,7 @@ set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/resources/img/dmstode
 #set(CMAKE_PREFIX_PATH "/usr/Qt/5.15.3/x86_64-w64-mingw32/")
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+#INCLUDE_DIRECTORIES( ${Qt5Widgets_INCLUDE_DIRS})
 
 configure_file(config.h.in ../include/config.h)
 
@@ -28,6 +29,8 @@ set(PROJECT_SOURCES
         src/aboutwindow.h
         src/aboutwindow.cpp
         src/aboutwindow.ui
+	src/mathmodel.h
+	src/mathmodel.cpp
 )
 
 
@@ -52,11 +55,11 @@ option(ENABLE_TEST "Turn on to enable tests" ON)
 if (ENABLE_TEST)
 		enable_testing()
 
-		set(CATCH2_DIR test)
+		set(CATCH2_DIR ./test)
 		add_library(Catch INTERFACE)
 		target_include_directories(Catch INTERFACE ${CATCH2_DIR})
 
-		add_subdirectory(test)
+		add_subdirectory(./test)
 endif()
 
 target_include_directories(dmstodeg PUBLIC ../include)

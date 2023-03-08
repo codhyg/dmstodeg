@@ -23,12 +23,12 @@ private slots:
     void calculate_pressed();
     void reverse_pressed();
     int intInput(const QString& s);
-    double dmsToDegConversion(int deg, int min, int sec);
     void switchAnimation(QWidget* w1, QWidget* w2);
     void calcDmsToDeg();
     void calcDegToDms();
     bool eventFilter(QObject *object, QEvent *event);
     void showAboutWindow();
     void clearAllFields();
+
 };
 #endif // MAINWINDOW_H
