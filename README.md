@@ -3,29 +3,17 @@
 Is a simple app for conversion of angle values (decimal to degrees, minutes,
 seconds)
 
-### v0.9.0
-- Added the app icon.
-- Added app file info for Windows.
-- Fixed font size for buttons.
-- Add more shortcuts (see About window -> F1 or Ctrl+/).
-
-### v0.7.0
-- NumPad Enter support
-- Select field text on focus
-- About window has been added
-
-### v0.5.0
-Properly compiled for Win. Removed console debug messages.
-
-### v0.4.0
-Main functionality is implemented. Added user input validation for decimal
-degrees.
-
-### v0.2.0
-The very basic functionality is implemented.
 
 ## Installation
 Windows: Unpack .zip with the application to any directory.
 
 ## Usage
 ![dmstodeg picture](resources/img/dmstodeg_pic.png)
+Сразу после запуска открывается окно программы в режиме перевода градусов, минут
+и секунд в десятичные градусы. В соответствующие поля ввода необходимо ввести
+значения и нажать "Calculate" (или Enter/Return на клавиатуре). В нижней строке окна отобразится результат. Вводить можно только числа от 0 до 360 в поле градусы и от 0 до 60 в поля минуты и секунды.
+
+Для перехода в режим перевода из десятичных градусов в градусы, минуты и секунды
+нажать кнопку "Reverse", поля ввода поменяются местами и поле десятичных
+градусов станет доступно для ввода. Ввести значение и нажать "Calculate" (или
+Enter/Return на клавиатуре). Вводить можно только числа от 0 до 360.
