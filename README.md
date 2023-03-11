@@ -28,4 +28,4 @@ The very basic functionality is implemented.
 Windows: Unpack .zip with the application to any directory.
 
 ## Usage
-![dmstodeg picture](resources/img/dmstodeg_icon.png)
+![dmstodeg picture](resources/img/dmstodeg pic.png)
