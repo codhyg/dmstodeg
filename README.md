@@ -8,7 +8,8 @@ seconds)
 Windows: Unpack .zip with the application to any directory.
 
 ## Usage
-![dmstodeg picture](resources/img/dmstodeg_pic.png)
+![dmstodeg picture](resources/img/dmstodeg_pic.png)  
+
 Сразу после запуска открывается окно программы в режиме перевода градусов, минут
 и секунд в десятичные градусы. В соответствующие поля ввода необходимо ввести
 значения и нажать "Calculate" (или Enter/Return на клавиатуре). В нижней строке окна отобразится результат. Вводить можно только числа от 0 до 360 в поле градусы и от 0 до 60 в поля минуты и секунды.
