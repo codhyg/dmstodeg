@@ -16,7 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q), this, SLOT(close()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_D), ui->spinBoxDeg, SLOT(setFocus()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_M), ui->spinBoxMin, SLOT(setFocus()));
@@ -24,7 +23,6 @@ MainWindow::MainWindow(QWidget *parent)
     new QShortcut(QKeySequence(Qt::Key_Enter), this, SLOT(calculate_pressed()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Slash), this, SLOT(showAboutWindow()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Question), this, SLOT(showAboutWindow()));
-    //TODO: add F1 shortcut for about window, ctrl+l for clear all
     new QShortcut(QKeySequence(Qt::Key_F1), this, SLOT(showAboutWindow()));
     new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_L), this, SLOT(clearAllFields()));
 
@@ -41,9 +39,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->spinBoxMin->installEventFilter(this);
     ui->spinBoxSec->installEventFilter(this);
 
-    //this goes to IF section
+    //fields state on startup
     ui->spinBoxDeg->setFocus();
     ui->spinBoxDeg->selectAll();
+    ui->degField->setText("0.0000");
 }
 
 MainWindow::~MainWindow()
@@ -164,7 +163,7 @@ void MainWindow::showAboutWindow()
 
 void MainWindow::clearAllFields()
 {
-    ui->degField->setText("0");
+    ui->degField->setText("0.0000");
     ui->spinBoxDeg->setValue(0);
     ui->spinBoxMin->setValue(0);
     ui->spinBoxSec->setValue(0);

@@ -1,11 +1,11 @@
 #ifndef APPINFO_H
 #define APPINFO_H
 
-#define VER_FILEVERSION             0,9,0,0
-#define VER_FILEVERSION_STR         "0.9.0.0\0"
+#define VER_FILEVERSION             1,0,0,0
+#define VER_FILEVERSION_STR         "1.0.0.0\0"
 
-#define VER_PRODUCTVERSION          0,9,0,0
-#define VER_PRODUCTVERSION_STR      "0.9\0"
+#define VER_PRODUCTVERSION          1,0,0,0
+#define VER_PRODUCTVERSION_STR      "1.0\0"
 
 #define VER_COMPANYNAME_STR         "codhygge"
 #define VER_FILEDESCRIPTION_STR     "DMS TO DEG"

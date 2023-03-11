@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>360</width>
-    <height>340</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>360</width>
-    <height>340</height>
+    <height>400</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>360</width>
-    <height>340</height>
+    <height>400</height>
    </size>
   </property>
   <property name="font">
@@ -45,8 +45,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>363</width>
-     <height>347</height>
+     <width>406</width>
+     <height>402</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -103,6 +103,9 @@
     </item>
     <item>
      <widget class="QLabel" name="contactInfo">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;copy; 2023 codhyg   &lt;a href=&quot;https://github.com/codhyg/dmstodeg&quot;&gt;github.com&lt;/a&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
@@ -139,7 +142,9 @@
     <item>
      <widget class="QLabel" name="disclaimerLabel">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, &lt;br/&gt;but WITHOUT ANY WARRANTY; without even the implied&lt;br/&gt;warranty of MERCHANTABILITY or FITNESS FOR A &lt;br/&gt;PARTICULAR PURPOSE. See the GNU General Public License&lt;br/&gt;for more details.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, &lt;br/&gt;but WITHOUT ANY WARRANTY; without even the implied&lt;br/&gt;warranty of MERCHANTABILITY or FITNESS FOR A &lt;br/&gt;PARTICULAR PURPOSE. See the GNU General Public License&lt;br/&gt;for more details.&lt;/p&gt;
+
+&lt;p&gt;Эта программа распространяется в надежде, что будет &lt;br/&gt; полезной,  но БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, даже без &lt;br/&gt; подразумеваемой гарантии  ПРИГОДНОСТИ ДЛЯ &lt;br/&gt; КАКОЙ-ЛИБО ЦЕЛИ. Подробнее см. GNU GPL. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>

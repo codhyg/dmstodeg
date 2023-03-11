@@ -1,5 +1,10 @@
 ## Version History
 
+### v1.0.0
+- Added usage info.
+- Fixed empty value in the decimal degrees field.
+- Minor improvements.
+
 ### v0.9.0
 - Added the app icon.
 - Added app file info for Windows.

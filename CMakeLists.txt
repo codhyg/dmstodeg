@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(dmstodeg VERSION 0.9.0)
+project(dmstodeg VERSION 1.0.0)
 
 CMAKE_POLICY(SET CMP0020 NEW)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -34,7 +34,7 @@ set(PROJECT_SOURCES
 )
 
 
-IF (UNIX)
+IF (MINGW)
         add_executable(dmstodeg WIN32 ${PROJECT_SOURCES})
 ELSE()
         add_executable(dmstodeg WIN32 ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
@@ -44,6 +44,7 @@ set_property(TARGET dmstodeg PROPERTY WIN32_EXECUTABLE true)
 set_target_properties(dmstodeg PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
+
 IF(WIN32)
         set_target_properties(dmstodeg PROPERTIES LINK_FLAGS "-mwindows")
 ENDIF()
